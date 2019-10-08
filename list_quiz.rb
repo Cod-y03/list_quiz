@@ -3,7 +3,7 @@ def three_even(list)
     i = 0
     list.size.times do
 
-        if list[i] % 2 == 0 && list[i + 1] % 2 == 0 && list[i - 1] % 2 == 0
+        if list[i] % 2 == 0 && list[i + 1] % 2 == 0 && list[i + 2] % 2 == 0
             return true
         end
         i = i + 1
@@ -51,4 +51,3 @@ i = 0
     n.times do
         puts 1 
         puts 1 + i
-        
