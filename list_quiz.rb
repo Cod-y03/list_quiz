@@ -1,9 +1,9 @@
 
 def three_even(list)
     i = 0
-    list.size.times do
+    (list.size - 2).times do
 
-        if list[i] % 2 == 0 && list[i + 1] % 2 == 0 && list[i + 2] % 2 == 0
+        if list[i] % 2 == 0 && list[i + 1] % 2 == 0 && list[i + 2] % 2 == 0 && list[i +1] != nil && list[i + 2] != nil
             return true
         end
         i = i + 1
@@ -11,11 +11,12 @@ def three_even(list)
     return false
 end
 
-puts three_even([2, 1, 3, 5])#false
-puts three_even([2, 4, 12, 5]) #true
-puts three_even([2, 4, 4, 6]) #true
-puts three_even([2, 1, 64, 56, 71, 871, 23423, 43541, 456541, 4561 ,451,561 , 51])
-puts three_even([])
+# puts three_even([2, 1, 3, 5])#false
+# puts three_even([2, 4, 12, 5]) #true
+# puts three_even([2, 4, 4, 6]) #true
+# puts three_even([2, 1, 4, 6]) #false
+# puts three_even([2, 1, 64, 56, 71, 871, 23423, 43541, 456541, 4561 ,451,561 , 51])
+# puts three_even([])
 
 # _______________________________________________
 def bigger_than(first, second)
@@ -46,7 +47,23 @@ end
 # _______________________________________________
 
 def series_up(n)
-i = 0
-    n.times do
-        puts 1 
-        puts 1 + i
+    i = 0 
+    k = 1
+    puts """__
+    """
+    n.times do   
+        puts 1
+        i.times do
+                puts 1 + k
+            k = k + 1
+        end
+            puts "  "
+        i = i + 1
+        k = 1
+    end
+end
+
+series_up(2)
+series_up(6)
+series_up(5)
+series_up(1)
