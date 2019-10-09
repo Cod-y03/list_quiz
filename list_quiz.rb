@@ -52,10 +52,10 @@ def series_up(n)
     puts """__
     """
     n.times do   
-        puts 1
-        i.times do
+        puts 1 #always expected
+        i.times do # runs after the first using i
                 puts 1 + k
-            k = k + 1
+            k = k + 1 #increacing value that controls numbers 
         end
             puts "  "
         i = i + 1
